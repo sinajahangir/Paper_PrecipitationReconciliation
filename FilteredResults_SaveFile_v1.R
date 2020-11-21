@@ -339,3 +339,12 @@ for (jj in seq(1,5)){
   error.ets.whole.ave[[jj]]<-temp_ets
   error.nnet.whole.ave[[jj]]<-temp_nnet
 }
+
+#method names
+method_names<-c('HLS','WLS','OLS','BU')
+names(error.arima.whole.ave)<-method_names
+names(error.nnet.whole.ave)<-method_names
+names(error.ets.whole.ave)<-method_names
+#adding to data
+Data<-list(ets=error.ets.whole.ave,nnet=error.nnet.whole.ave,arima=error.arima.whole.ave)
+file_name<-
